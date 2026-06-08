@@ -41,6 +41,49 @@ The id command displays the user ID (UID), group ID (GID) and the user's groups.
 
 I attempted adduser HermanO and Linux refused to add the user, stating that the name was not in the correct format. Converting to lowercase solved the problem right away.
 
+## 3. Setting Up PostgreSQL
+PostgreSQL is one of the most popular relational databases for data engineering. It's open source, robust, and offers advanced capabilities such as JSON storage, partitioning, and complex queries. Many modern data stacks use PostgreSQL as their primary database.
+
+### Checking if PostgreSQL is Installed
+Before installing anything, always check if it is already there:
+
+```bash
+psql --version
+```
+
+![PostgreSQL Version](screenshots/postgres_verification.png)
+
+In my case, PostgreSQL 16.14 was already installed. I then checked if the service 
+was running:
+
+```bash
+systemctl status postgresql
+```
+
+![PostgreSQL Status](screenshots/systemctl_status_postgresql.png)
+
+The service was active and enabled, meaning it starts automatically every time the server reboots.
+
+### Allowing External Connections
+PostgreSQL by default only allows connections from the same machine that it is installed on. Data Engineering tasks frequently require access to PostgreSQL from other applications such as DBeaver, TablePlus, or from Python code on a remote host. To allow external connections, you need to edit two configuration files:
+
+**postgresql.conf** — change `listen_addresses = 'localhost'` to `listen_addresses = '*'`
+
+**pg_hba.conf** — add a line to allow connections from any IP:
+
+host all all 0.0.0.0/0 md5
+
+Then open the firewall port:
+
+```bash
+ufw allow 5432/tcp
+```
+This is a skill every data engineer needs, configuring databases to be accessible from data visualization tools, ETL pipelines, and analytics platforms.
+
+
+
+
+
 
 
 
