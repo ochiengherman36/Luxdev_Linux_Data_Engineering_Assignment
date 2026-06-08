@@ -288,5 +288,5 @@ Modern data infrastructure is based on Linux. From handling cloud databases to r
 
 I would recommend that if you are learning data engineering you should get your hands dirty and start working with a Linux server. Start out with a low-cost DigitalOcean droplet and practice these commands, and become more confident. The terminal is your most powerful tool, learn to use it well.
 
-## References
+## Reference
 Byrone_Code. (2026). *Introduction to Linux for Data Engineers: Mastering the Command Line*. DEV Community. https://dev.to/byrone_code/introduction-to-linux-for-data-engineers-mastering-the-command-line-2dgk
