@@ -24,7 +24,15 @@ The user creation command in Linux is called adduser:
 ```bash
 adduser herman
 ```
-![Add User](screenshots/user_creation.png)
+Linux will guide you through setting the password and entering some basic user information. After this, you can check to see if the user was created successfully, as follows:
+```bash
+id herman
+cat /etc/passwd | grep herman
+```
+![User Verification](screenshots/user_creation.png)
+The id command displays the user ID (UID), group ID (GID) and the user's groups. All the basic information about all the users on the system is stored in the /etc/passwd file. Something I found out during this step is that the Linux username needs to be in lower case. 
+
+I attempted adduser HermanO and Linux refused to add the user, stating that the name was not in the correct format. Converting to lowercase solved the problem right away.
 
 
 
