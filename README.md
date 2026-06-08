@@ -198,95 +198,68 @@ Below are 25 Linux commands I ran on the server, with explanations of what each 
 
 ### System Resources
 
-**`df -h`** — Shows disk space usage across all mounted drives in human readable 
-format. On our server, the main disk had 77GB total with only 2.7GB used.
+15) **`df -h`** - Shows disk space usage across all mounted drives in human readable format. On our server, the main disk had 77GB total with only 2.7GB used.
 
-![df -h](screenshots/cmd04_df_h.png)
+    ![df -h](screenshots/df_h.png)
 
-**`free -h`** — Shows RAM and swap memory usage. Our server had 3.8GB RAM with 
-only 473MB used, very healthy.
+16) **`free -h`** - Shows RAM and swap memory usage. Our server had 3.8GB RAM with only 473MB used, very healthy.
 
-![free -h](screenshots/cmd05_free_h.png)
+    ![free -h](screenshots/free_h.png)
 
-**`lscpu`** — Shows detailed CPU information including number of cores, 
-architecture, and virtualization support.
+17) **`lscpu`** - Shows detailed CPU information including number of cores, architecture, and virtualization support.
 
-![lscpu](screenshots/cmd06_lscpu.png)
+    ![lscpu](screenshots/lscpu.png)
 
-**`top -bn1 | head -20`** — Shows a snapshot of running processes sorted by 
-resource usage. The `-bn1` flag runs it once in batch mode instead of 
-interactively.
+18) **`top -bn1 | head -20`** - Shows a snapshot of running processes sorted by resource usage. The `-bn1` flag runs it once in batch mode instead of interactively.
 
-![top](screenshots/cmd07_top.png)
+    ![top](screenshots/top_bn1_head_20.png)
 
-**`uptime`** — Shows how long the server has been running and the current load 
-average.
+19) **`uptime`** - Shows how long the server has been running and the current load average.
 
-![uptime](screenshots/cmd10_uptime.png)
-
----
+    ![uptime](screenshots/uptime.png)
 
 ### Networking
 
-**`ip addr show`** — Shows all network interfaces and their IP addresses. I could 
-see the server had a public IP (159.65.222.96) and a private IP (10.10.0.8).
+20) **`ip addr show`** - Shows all network interfaces and their IP addresses. I could see the server had a public IP (159.65.222.96) and a private IP (10.10.0.8).
 
-![ip addr](screenshots/cmd08_ip_addr.png)
+    ![ip addr](screenshots/ip_addr_show.png)
 
-**`ss -tulnp`** — Shows all open ports and which services are listening on them. 
-I could confirm PostgreSQL was listening on port 5432 and SSH on port 22.
+21) **`ss -tulnp`** - Shows all open ports and which services are listening on them. I could confirm PostgreSQL was listening on port 5432 and SSH on port 22.
 
-![ss -tulnp](screenshots/cmd09_ss_tulnp.png)
-
----
-
+    ![ss -tulnp](screenshots/ss_tulnp.png)
+    
 ### Services and Logs
 
-**`systemctl list-units --type=service --state=running`** — Lists all currently 
-running services. I could see PostgreSQL, SSH, and many other services running.
+22) **`systemctl list-units --type=service --state=running`** - Lists all currently running services. I could see PostgreSQL, SSH, and many other services running.
 
-![systemctl list](screenshots/cmd19_systemctl_list.png)
+    ![systemctl list](screenshots/systemctl_list-units_type=service_state=running.png)
 
-**`systemctl status postgresql`** — Shows detailed status of the PostgreSQL 
-service including when it started and recent log entries.
+23) **`systemctl status postgresql`** - Shows detailed status of the PostgreSQL service including when it started and recent log entries.
 
-![systemctl status](screenshots/cmd20_systemctl_status.png)
+    ![systemctl status](screenshots/systemctl_status_postgresql.png)
 
-**`journalctl -n 20`** — Shows the last 20 system log entries. I could see failed 
-SSH login attempts from random IP addresses trying to brute force the server.
+24) **`journalctl -n 20`** - Shows the last 20 system log entries. I could see failed SSH login attempts from random IP addresses trying to brute force the server.
 
-![journalctl](screenshots/cmd21_journalctl.png)
-
----
+    ![journalctl](screenshots/journalctl_n_20.png)
 
 ### Environment and Search
 
-**`env | head -20`** — Shows environment variables. These include your shell type, 
-home directory, PATH, and other important system settings.
+25) **`env | head -20`** - Shows environment variables. These include your shell type, home directory, PATH, and other important system settings.
 
-![env](screenshots/cmd22_env.png)
+    ![env](screenshots/env_head_20.png)
 
-**`find / -name "pg_hba.conf" 2>/dev/null`** — Searches the entire filesystem for 
-a file by name. The `2>/dev/null` hides permission error messages. Found the file 
-at `/etc/postgresql/16/main/pg_hba.conf`.
+26) **`find / -name "pg_hba.conf" 2>/dev/null`** - Searches the entire filesystem for a file by name. The `2>/dev/null` hides permission error messages. Found the file at `/etc/postgresql/16/main/pg_hba.conf`.
 
-![find](screenshots/cmd23_find.png)
-
----
+    ![find](screenshots/find.png)
 
 ## 6. Transferring Files with SCP
-SCP (Secure Copy Protocol) is how you transfer files between your local machine 
-and a remote server. This is extremely useful in data engineering for uploading 
-data files, scripts, and configuration files.
+SCP (Secure Copy Protocol) is how you transfer files between your local machine and a remote server. This is extremely useful in data engineering for uploading data files, scripts, and configuration files.
 
 ### Upload from Local PC to Server
-Open Git Bash on your local machine and run:
 
 ```bash
 scp mydata.csv root@159.65.222.96:/root/myproject/
 ```
-
-![SCP Upload](screenshots/scp_upload.png)
 
 ### Download from Server to Local PC
 
@@ -294,11 +267,7 @@ scp mydata.csv root@159.65.222.96:/root/myproject/
 scp root@159.65.222.96:/root/myproject/mydata.csv ~/Downloads/
 ```
 
-![SCP Download](screenshots/scp_download.png)
-
-SCP uses the same SSH security as your normal server connection, so no extra setup 
-is needed. It is one of the most practical tools for moving data around in a data 
-engineering workflow.
+SCP uses the same SSH security as your normal server connection, so no extra setup is needed. It is one of the most practical tools for moving data around in a data engineering workflow.
 
 
 
