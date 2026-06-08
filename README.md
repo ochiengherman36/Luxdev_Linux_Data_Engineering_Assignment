@@ -136,7 +136,7 @@ This staging pattern is used in real-life data pipelines on a regular basis. Raw
 ---
 
 ## 5. Essential Linux Commands Every Data Engineer Should Know
-Below are 25 Linux commands I ran on the server, with explanations of what each one does and why it matters.
+Below are 26 Linux commands I ran on the server, with explanations of what each one does and why it matters.
 
 ### System & User Information
 
