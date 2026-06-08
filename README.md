@@ -133,8 +133,6 @@ INSERT INTO staging.employees (name, department, salary, hire_date) VALUES
 
 This staging pattern is used in real-life data pipelines on a regular basis. Raw data is received into staging, validated and cleaned and then transferred into production tables.
 
----
-
 ## 5. Essential Linux Commands Every Data Engineer Should Know
 Below are 26 Linux commands I ran on the server, with explanations of what each one does and why it matters.
 
