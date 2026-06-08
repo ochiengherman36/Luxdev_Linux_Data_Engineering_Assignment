@@ -80,7 +80,31 @@ ufw allow 5432/tcp
 ```
 This is a skill every data engineer needs, configuring databases to be accessible from data visualization tools, ETL pipelines, and analytics platforms.
 
+## 4. Creating a Database and Staging Schema
+Once PostgreSQL was up and running, the next part of the process was creating the database and establishing a staging schema. The staging schema is the place where raw data is deposited prior to cleaning and transformation in data engineering. It's a standard practice in data warehousing and ETL processes.
 
+### Creating the Database
+
+```bash
+su - postgres
+psql
+```
+
+Inside psql:
+
+```sql
+CREATE DATABASE herman;
+\c herman
+```
+
+### Creating the Staging Schema
+
+```sql
+CREATE SCHEMA staging;
+\dn
+```
+
+![Create Database](screenshots/create_staging_schema_and_dataset.png)
 
 
 
