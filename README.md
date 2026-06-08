@@ -67,9 +67,9 @@ The service was active and enabled, meaning it starts automatically every time t
 ### Allowing External Connections
 PostgreSQL by default only allows connections from the same machine that it is installed on. Data Engineering tasks frequently require access to PostgreSQL from other applications such as DBeaver, TablePlus, or from Python code on a remote host. To allow external connections, you need to edit two configuration files:
 
-**postgresql.conf** — change `listen_addresses = 'localhost'` to `listen_addresses = '*'`
+**postgresql.conf** - change `listen_addresses = 'localhost'` to `listen_addresses = '*'`
 
-**pg_hba.conf** — add a line to allow connections from any IP:
+**pg_hba.conf** - add a line to allow connections from any IP:
 
 host all all 0.0.0.0/0 md5
 
