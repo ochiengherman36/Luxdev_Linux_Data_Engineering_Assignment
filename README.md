@@ -15,6 +15,14 @@ ssh root@159.65.222.96
 ```
 ![SSH Login](screenshots/successful_login.png)
 
+The server will prompt you to accept the server's identity when you're connecting for the first time by displaying a fingerprint. Press yes to proceed. Then, you key in your password and you're in. 
+After logging in, you will be able to view important information regarding the server like Operating System version, memory 
+usage, how long it has been running, and how many users are logged in. For my 
+example, I'm using Ubuntu 24.04.4 LTS, one of the most common Linux distributions 
+for data engineering. Being able to understand SSH is essential as a data engineer, 
+since you will be connecting to cloud servers on AWS, Google Cloud, Azure, or 
+DigitalOcean and managing databases, running scripts, and deploying pipelines.
+
 
 
 
