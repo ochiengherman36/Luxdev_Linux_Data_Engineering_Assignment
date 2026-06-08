@@ -287,3 +287,6 @@ Working through this assignment gave me a hands-on experience with the tools and
 Modern data infrastructure is based on Linux. From handling cloud databases to running Spark jobs or deploying Airflow pipelines, everything you are doing is going to be on a Linux server. The commands and ideas presented in this article are not just theoretical, they are going to be skills you use on your first day as a data engineer.
 
 I would recommend that if you are learning data engineering you should get your hands dirty and start working with a Linux server. Start out with a low-cost DigitalOcean droplet and practice these commands, and become more confident. The terminal is your most powerful tool, learn to use it well.
+
+## References
+Byrone_Code. (2026). *Introduction to Linux for Data Engineers: Mastering the Command Line*. DEV Community. https://dev.to/byrone_code/introduction-to-linux-for-data-engineers-mastering-the-command-line-2dgk
