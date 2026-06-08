@@ -269,11 +269,21 @@ scp root@159.65.222.96:/root/myproject/mydata.csv ~/Downloads/
 
 SCP uses the same SSH security as your normal server connection, so no extra setup is needed. It is one of the most practical tools for moving data around in a data engineering workflow.
 
+## Conclusion 
+Working through this assignment gave me a hands-on experience with the tools and workflows that data engineers use every day. Here is a summary of what we covered:
 
+- Connecting to remote servers securely using SSH
 
+- Managing Linux users and understanding permissions
 
+- Installing and configuring PostgreSQL for external access
 
+- Creating databases, schemas, and tables with real sample data
 
+- Running 25 essential Linux commands covering files, networking, processes, and system resources
 
+- Transferring files between local and remote machines using SCP
 
+Modern data infrastructure is based on Linux. From handling cloud databases to running Spark jobs or deploying Airflow pipelines, everything you are doing is going to be on a Linux server. The commands and ideas presented in this article are not just theoretical, they are going to be skills you use on your first day as a data engineer.
 
+I would recommend that if you are learning data engineering you should get your hands dirty and start working with a Linux server. Start out with a low-cost DigitalOcean droplet and practice these commands, and become more confident. The terminal is your most powerful tool, learn to use it well.
