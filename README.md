@@ -1,4 +1,6 @@
-# Luxdev_Linux_Data_Engineering_Assignment
-Documenting hands-on experiences with Linux and PostgreSQL on a remote server including user management, databases and basic commands.
+## Linux Fundamentals for Data Engineering
+*A hands-on walkthrough of server access, user management, PostgreSQL setup, and essential Linux commands*
+
+
 
 
