@@ -16,12 +16,15 @@ ssh root@159.65.222.96
 ![SSH Login](screenshots/successful_login.png)
 
 The server will prompt you to accept the server's identity when you're connecting for the first time by displaying a fingerprint. Press yes to proceed. Then, you key in your password and you're in. 
-After logging in, you will be able to view important information regarding the server like Operating System version, memory 
-usage, how long it has been running, and how many users are logged in. For my 
-example, I'm using Ubuntu 24.04.4 LTS, one of the most common Linux distributions 
-for data engineering. Being able to understand SSH is essential as a data engineer, 
-since you will be connecting to cloud servers on AWS, Google Cloud, Azure, or 
-DigitalOcean and managing databases, running scripts, and deploying pipelines.
+After logging in, you will be able to view important information regarding the server like Operating System version, memory usage, how long it has been running, and how many users are logged in. For my example, I'm using Ubuntu 24.04.4 LTS, one of the most common Linux distributions for data engineering. 
+Being able to understand SSH is essential as a data engineer, since you will be connecting to cloud servers on AWS, Google Cloud, Azure, or DigitalOcean and managing databases, running scripts, and deploying pipelines.
+## 2. Creating a Linux User Account
+Creating user accounts is one of the first things you will do as an administrator in a server. Within an actual company, every user requiring access to a server is assigned a user account. This is important for security; you never want everyone sharing the root account. 
+The user creation command in Linux is called adduser:
+```bash
+adduser herman
+```
+![Add User](screenshots/user_creation.png)
 
 
 
