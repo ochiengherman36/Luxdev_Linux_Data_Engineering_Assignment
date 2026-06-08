@@ -144,18 +144,15 @@ Below are 25 Linux commands I ran on the server, with explanations of what each 
 
 ![whoami](screenshots/whoami.png)
 
-**`pwd`** — Print Working Directory. Shows exactly where you are in the file 
-system. Essential for navigating servers without getting lost.
+2) **`pwd`** - Print Working Directory. Shows exactly where you are in the file system. Essential for navigating servers without getting lost.
 
-![pwd](screenshots/cmd02_pwd.png)
+![pwd](screenshots/pwd.png)
 
-**`id herman`** — Shows user ID, group ID and group memberships. Useful for 
-troubleshooting permission issues.
+3) **`id herman`** - Shows user ID, group ID and group memberships. Useful for troubleshooting permission issues.
 
-**`who`** — Shows who is currently logged into the server. On our shared 
-assignment server, I could see other students logged in at the same time.
+4) **`who`** — Shows who is currently logged into the server. On our shared assignment server, I could see other students logged in at the same time.
 
-![who](screenshots/cmd24_who.png)
+![who](screenshots/who.png)
 
 **`last | head -10`** — Shows the last 10 login history entries. Useful for 
 auditing who has accessed the server.
