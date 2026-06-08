@@ -142,58 +142,59 @@ Below are 25 Linux commands I ran on the server, with explanations of what each 
 
 1) **`whoami`** - Shows the current logged-in user. Always useful to confirm which user you are operating as, especially when switching between root and other users.
 
-![whoami](screenshots/whoami.png)
+    ![whoami](screenshots/whoami.png)
 
 2) **`pwd`** - Print Working Directory. Shows exactly where you are in the file system. Essential for navigating servers without getting lost.
 
-![pwd](screenshots/pwd.png)
+    ![pwd](screenshots/pwd.png)
 
 3) **`id herman`** - Shows user ID, group ID and group memberships. Useful for troubleshooting permission issues.
 
 4) **`who`** — Shows who is currently logged into the server. On our shared assignment server, I could see other students logged in at the same time.
 
-![who](screenshots/who.png)
+    ![who](screenshots/who.png)
 
-**`last | head -10`** — Shows the last 10 login history entries. Useful for 
-auditing who has accessed the server.
+5) **`last | head -10`** - Shows the last 10 login history entries. Useful for auditing who has accessed the server.
 
-![last](screenshots/cmd25_last.png)
-
----
-
+    ![last](screenshots/last_head_10.png)
+    
 ### File and Directory Management
 
-**`ls -la`** — Lists all files and directories including hidden ones, with 
-detailed information like permissions, size, and timestamps.
+6) **`ls -la`** - Lists all files and directories including hidden ones, with detailed information like permissions, size, and timestamps.
 
-![ls -la](screenshots/cmd03_ls_la.png)
+    ![ls -la](screenshots/ls_la.png)
 
-**`mkdir ~/myproject`** — Creates a new directory. The `~` means your home 
-directory.
+7) **`mkdir ~/myproject`** - Creates a new directory. The `~` means your home directory.
 
-**`cd ~/myproject`** — Changes into the myproject directory. Navigation is a 
-fundamental skill.
+    ![ls -la](screenshots/mkdir.png)
 
-**`touch mydata.csv`** — Creates an empty file. Useful for quickly creating 
-placeholder files.
+8) **`cd ~/myproject`** - Changes into the myproject directory. Navigation is a fundamental skill.
 
-**`echo "id,name,department" > mydata.csv`** — Writes text into a file. The `>` 
-overwrites the file and `>>` appends to it.
+    ![ls -la](screenshots/cd.png)
 
-**`cat mydata.csv`** — Displays file contents in the terminal.
+9) **`touch mydata.csv`** - Creates an empty file. Useful for quickly creating placeholder files.
 
-![cat](screenshots/cmd15_cat.png)
+    ![ls -la](screenshots/touch.png)
 
-**`ls -lh mydata.csv`** — Shows file size in human readable format (KB, MB etc).
+10) **`echo "id,name,department" > mydata.csv`** - Writes text into a file. The `>` overwrites the file and `>>` appends to it.
 
-![ls -lh](screenshots/cmd16_ls_lh.png)
+    ![ls -la](screenshots/echo.png)
 
-**`cp mydata.csv mydata_backup.csv`** — Copies a file. Always good practice to 
-back up files before editing.
+11) **`cat mydata.csv`** - Displays file contents in the terminal.
 
-**`mv mydata_backup.csv mydata_v2.csv`** — Renames or moves a file.
+    ![cat](screenshots/cat.png)
 
----
+12) **`ls -lh mydata.csv`** - Shows file size in human readable format (KB, MB etc).
+
+    ![ls -lh](screenshots/ls_lh_mydata.csv.png)
+
+13) **`cp mydata.csv mydata_backup.csv`** - Copies a file. Always good practice to back up files before editing.
+
+    ![ls -lh](screenshots/cp_mydata.csv_m_data_backup.csv.png)
+
+14) **`mv mydata_backup.csv mydata_v2.csv`** - Renames or moves a file.
+
+    ![ls -lh](screenshots/mv_mydata_backup.csv_mydata_v2.csv.png)
 
 ### System Resources
 
