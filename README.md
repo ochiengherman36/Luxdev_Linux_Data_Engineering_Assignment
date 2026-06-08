@@ -106,6 +106,35 @@ CREATE SCHEMA staging;
 
 ![Create Database](screenshots/create_staging_schema_and_dataset.png)
 
+### Creating a Table and Inserting Data
+
+```sql
+CREATE TABLE staging.employees (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    department VARCHAR(100),
+    salary NUMERIC,
+    hire_date DATE
+);
+```
+
+Then I inserted actual sample data:
+
+```sql
+INSERT INTO staging.employees (name, department, salary, hire_date) VALUES
+('James Nyaga', 'Engineering', 85000, '2021-03-15'),
+('Wilmar Wambui', 'Marketing', 62000, '2020-07-01'),
+('Kevin Barasa', 'Data', 91000, '2019-11-20'),
+('David Owuor', 'HR', 55000, '2022-01-10'),
+('Evelyn Wambui', 'Engineering', 95000, '2018-06-30');
+```
+
+![Employee Data](screenshots/create_staging_schema_and_dataset.png)
+
+This staging pattern is used in real-life data pipelines on a regular basis. Raw data is received into staging, validated and cleaned and then transferred into production tables.
+
+
+
 
 
 
