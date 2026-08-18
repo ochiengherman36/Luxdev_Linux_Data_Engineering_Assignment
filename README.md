@@ -1,5 +1,4 @@
 ## Linux Fundamentals for Data Engineering
-*A hands-on walkthrough of server access, user management, PostgreSQL setup, and essential Linux commands*
 ## Introduction
 One of the most important skills for someone new to data engineering is learning how to interact with Linux servers. Whether it's cloud servers, databases, or data pipelines, most data infrastructure is running on Linux. Navigating a Linux environment is no longer an option for data engineers, but a prerequisite skill they must master if they are to succeed (Byrone_Code, 2026). 
 
